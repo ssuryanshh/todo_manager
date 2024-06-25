@@ -1,0 +1,16 @@
+
+.task {
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 2%;
+  position: relative;
+}
+
+#delete{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    right: 5px;
+    
+}
