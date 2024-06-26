@@ -10,7 +10,10 @@
 #delete{
     position: absolute;
     right: 0;
-    top: 5px;
-    right: 5px;
+    top: 2px;
+    right: 3px;
+    font-size: xx-small;
+    height: 20px;
+    width: 20px;
     
 }

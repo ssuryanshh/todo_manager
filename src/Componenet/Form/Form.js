@@ -89,7 +89,7 @@ function Form() {
         <h1>Completed Task</h1>
         <div className="task-container">
           {tasks.filter(task => task.status === 'Completed').map((task) => (
-            <Task data={task} />
+            <Task data={task} onRemove={handleRemove}/>
           ))}
         </div>
       </div>

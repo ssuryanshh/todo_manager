@@ -6,7 +6,6 @@ function Task({ data, onCompleted, onRemove }) {
   const { task, priority, status, id } = data;
 
   function remove() {
-    console.log("Task removed");
     onRemove(id);
   }
 
@@ -20,27 +19,34 @@ function Task({ data, onCompleted, onRemove }) {
       <div
         className="task"
         style={{
-          backgroundColor: status === "Completed"
-            ? "green"
-            : priority === "high"
-            ? "red"
-            : priority === "medium"
-            ? "yellow"
-            : "white",
+          backgroundColor:
+            status === "Completed"
+              ? "green"
+              : priority === "high"
+              ? "red"
+              : priority === "medium"
+              ? "yellow"
+              : "white",
         }}
       >
         <h3>Task: {task}</h3>
         <h3>Priority: {priority}</h3>
         <h3>Status: {status}</h3>
+        <Button
+          size="small"
+          className="delete-button"
+          id="delete"
+          onClick={remove}
+        >
+          X
+        </Button>
         {status === "pending" && (
-          <>
-            <Button size="small" className="delete-button" id="delete" onClick={remove}>
-              X
-            </Button>
-            <Button style={{ backgroundColor: "green", color: "white" }} onClick={completed}>
-              Completed
-            </Button>
-          </>
+          <Button
+            style={{ backgroundColor: "green", color: "white" }}
+            onClick={completed}
+          >
+            Completed
+          </Button>
         )}
       </div>
     </div>
