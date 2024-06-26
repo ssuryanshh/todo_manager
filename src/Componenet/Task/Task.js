@@ -2,7 +2,7 @@ import React from "react";
 import "./Task.css";
 import { Button } from "antd";
 
-function Task({ data, onCompleted, onRemove }) {
+function Task({ data, onCompleted, onRemove,onPending }) {
   const { task, priority, status, id } = data;
 
   function remove() {
@@ -13,6 +13,11 @@ function Task({ data, onCompleted, onRemove }) {
     console.log("Task completed");
     onCompleted(id);
   }
+  function pending() {
+    console.log("Task Pending");
+    onPending(id);
+  }
+  
 
   return (
     <div className="task-container">
@@ -37,6 +42,11 @@ function Task({ data, onCompleted, onRemove }) {
           className="delete-button"
           id="delete"
           onClick={remove}
+          style={
+            {
+            backgroundColor : "red"
+            }
+          }
         >
           X
         </Button>
@@ -46,6 +56,14 @@ function Task({ data, onCompleted, onRemove }) {
             onClick={completed}
           >
             Completed
+          </Button>
+        )}
+          {status !== "pending" && (
+          <Button
+            style={{ backgroundColor: "Blue", color: "white" }}
+            onClick={pending}
+          >
+            Pending
           </Button>
         )}
       </div>

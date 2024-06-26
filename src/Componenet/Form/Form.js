@@ -12,6 +12,11 @@ function Form() {
     setTasks(tasks.map(task => task.id === id ? { ...task, status: "Completed" } : task));
   }
 
+  function handlePending(id) {
+    setTasks(tasks.map(task => task.id === id ? { ...task, status: "pending" } : task));
+    console.log(tasks)
+  }
+
   function generateRandomId() {
     return Math.floor(100000 + Math.random() * 900000);
   }
@@ -89,7 +94,7 @@ function Form() {
         <h1>Completed Task</h1>
         <div className="task-container">
           {tasks.filter(task => task.status === 'Completed').map((task) => (
-            <Task data={task} onRemove={handleRemove}/>
+            <Task data={task} onRemove={handleRemove} onPending={handlePending}/>
           ))}
         </div>
       </div>
