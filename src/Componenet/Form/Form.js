@@ -47,7 +47,7 @@ function Form() {
           placeholder="Enter the task"
           style={{
             border: "1px solid black",
-            backgroundColor: "rgb(240, 240, 240)",
+            backgroundColor: "rgb(248, 248, 248)",
           }}
         />
         <Select
@@ -55,8 +55,7 @@ function Form() {
           value={priority || "select"}
           style={{
             width: 350,
-            border: "1px solid black",
-            backgroundColor: "rgb(240, 240, 240)",
+            border: "1px solid black"
           }}
           options={[
             {
@@ -83,7 +82,7 @@ function Form() {
         </Button>
       </div>
       <div className="pending-task">
-        <h1>Pending Task</h1>
+        <h1>Pending Task : {tasks.filter(task => task.status ==="pending").length}</h1>
         <div className="task-container">
           {tasks.filter(task => task.status === "pending").map((task) => (
             <Task data={task} onCompleted={handleCompleted} onRemove={handleRemove} />
@@ -91,7 +90,7 @@ function Form() {
         </div>
       </div>
       <div className="completed-task">
-        <h1>Completed Task</h1>
+        <h1>Completed Task : {tasks.filter(task => task.status ==="Completed").length}</h1>
         <div className="task-container">
           {tasks.filter(task => task.status === 'Completed').map((task) => (
             <Task data={task} onRemove={handleRemove} onPending={handlePending}/>

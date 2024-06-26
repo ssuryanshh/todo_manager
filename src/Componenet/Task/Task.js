@@ -34,9 +34,9 @@ function Task({ data, onCompleted, onRemove,onPending }) {
               : "white",
         }}
       >
-        <h3>Task: {task}</h3>
-        <h3>Priority: {priority}</h3>
-        <h3>Status: {status}</h3>
+        <h3>Task : {task}</h3>
+        <h3>Priority : {priority}</h3>
+        <h3>Status : {status}</h3>
         <Button
           size="small"
           className="delete-button"
@@ -44,7 +44,9 @@ function Task({ data, onCompleted, onRemove,onPending }) {
           onClick={remove}
           style={
             {
-            backgroundColor : "red"
+              backgroundColor: 'red',
+            color :'white',
+            fontWeight : "bold"
             }
           }
         >
