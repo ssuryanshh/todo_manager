@@ -29,7 +29,7 @@ git clone https://github.com/ssuryanshh/todo-app.git
 Navigate to the project directory:
 
 ```bash
-cd todo-app
+cd todo_manager
 ```
 Install the dependencies:
 ```bash
@@ -46,7 +46,7 @@ This will start the development server and open the application in your default 
 ### Project Structure
 
 ```
-todo-app/
+todo_manager/
 ├── src/
     ├── components/
     │   ├── Form.js
