@@ -49,10 +49,12 @@ This will start the development server and open the application in your default 
 todo_manager/
 ├── src/
     ├── components/
-    │   ├── Form.js
-    │   ├── Form.css
-    │   ├── Task.js
-    │   └── Task.css
+    |    │──Form
+    |    |   └── Form.js
+    |    |   └── Form.css
+    |    │──Task
+    |        └── Task.js
+    │        └── Task.css
     ├── App.js
     ├── App.css
     ├── index.js
