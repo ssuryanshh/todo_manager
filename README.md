@@ -48,15 +48,15 @@ This will start the development server and open the application in your default 
 ```
 todo-app/
 ├── src/
-│   ├── components/
-│   │   ├── Form.js
-│   │   ├── Form.css
-│   │   ├── Task.js
-│   │   └── Task.css
-│   ├── App.js
-│   ├── App.css
-│   ├── index.js
-│   └── index.css
+    ├── components/
+    │   ├── Form.js
+    │   ├── Form.css
+    │   ├── Task.js
+    │   └── Task.css
+    ├── App.js
+    ├── App.css
+    ├── index.js
+    └── index.css
 ```
 
 ### Usage
